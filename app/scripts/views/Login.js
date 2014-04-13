@@ -12,10 +12,9 @@ define([
         template: JST['app/scripts/templates/Login.hbs'],
         render: function(){
             this.$el.html(this.template());
+            $('html').addClass("bg-dark");
             return this;
         }
-    
-    
     });
 
     return LoginView;

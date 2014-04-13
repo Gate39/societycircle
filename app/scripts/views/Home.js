@@ -10,10 +10,12 @@ define([
 
     var HomeView = Backbone.View.extend({
         template: JST['app/scripts/templates/Home.hbs'],
-        render: function () {
-            this.$el.replaceWith(this.template());
+        render: function(){
+            this.$el.html(this.template());
+            $('html').removeClass("bg-dark");
             return this;
         }
+        
     });
 
     return HomeView;
