@@ -11,7 +11,7 @@ define([
     var HomeView = Backbone.View.extend({
         template: JST['app/scripts/templates/Home.hbs'],
         render: function () {
-            this.$el.html(this.template());
+            this.$el.replaceWith(this.template());
             return this;
         }
     });

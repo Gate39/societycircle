@@ -8,21 +8,22 @@ define([
 
     var MainRouter = Backbone.Router.extend({
         routes: {
-            "": "home",
-            "contact": "contact",
+            "": "login",
+            "login": "login",
+            "home": "home"
         },
         
         home: function () {
             require(["views/Home"], function (HomeView) {
                 
-                var view = new HomeView({el: $('.jumbotron')});
+                var view = new HomeView({el: $('body')});
                 view.render();
             });
         },
         
-        contact: function () {
+        login: function () {
             require(["views/Login"], function (LoginView) {
-                var view = new LoginView({el: $('.jumbotron')});
+                var view = new LoginView({el: $('body')});
                 view.render();
             });
         },
